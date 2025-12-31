@@ -1,0 +1,160 @@
+
+//Please use these prefixes for all the SPARQL queries
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX iri: <http://www.ontology-ma.org/recordsOntology#>
+
+*******************************************************************
+
+
+1) What standards address records or archives management?
+*******For records standrads
+
+select ?std ?stdCurrentEdition ?stdTitle     where {
+       ?std    rdf:type iri:RecordsStandard .
+       ?std     iri:hasEdition  ?stdCurrentEdition .
+       ?stdCurrentEdition  iri:title  ?stdTitle.
+       ?stdCurrentEdition  iri:isCurrentEdition true.              
+}
+
+******For archival standards
+select ?std ?stdCurrentEdition ?stdTitle     where {
+       ?std    rdf:type iri:ArchivalStandard .
+       ?std     iri:hasEdition  ?stdCurrentEdition .
+       ?stdCurrentEdition  iri:title  ?stdTitle.
+       ?stdCurrentEdition  iri:isCurrentEdition true.              
+}
+
+2) What standards address the management of physical or electronic records or archives?
+
+*******For electronic records/archives
+
+
+select ?std ?stdCurrentEdition ?stdTitle     where {
+       ?std    rdf:type iri:RAStandard .
+       ?std     iri:hasEdition  ?stdCurrentEdition .
+       ?stdCurrentEdition  iri:title  ?stdTitle.
+       ?stdCurrentEdition  iri:isaboutElectronicRecord  true.
+       ?stdCurrentEdition  iri:isCurrentEdition true.              
+}
+*******For physical records/archives
+
+select ?std ?stdCurrentEdition ?stdTitle     where {
+       ?std    rdf:type iri:RAStandard .
+       ?std     iri:hasEdition  ?stdCurrentEdition .
+       ?stdCurrentEdition  iri:title  ?stdTitle.
+       ?stdCurrentEdition  iri:isaboutPhysicalRecord  true.
+       ?stdCurrentEdition  iri:isCurrentEdition true.              
+}
+
+
+3) What standards address a specific document property (e.g., metadata as descriptive data [32], format)?
+
+//For querying about metadata standards
+//The ony individuals are as standards parts not editions//
+We recognized that the ontology model sould be extended to handle this case and to identify the part as editions
+
+
+select ?std ?stdCurrentEdition ?stdTitle     where {
+
+       ?std    rdf:type iri:MetadataStandard .
+       ?std     iri:hasEdition  ?stdCurrentEdition .
+       ?stdCurrentEdition  iri:title  ?stdTitle.
+       ?stdCurrentEdition  iri:isCurrentEdition true.              
+}
+
+//For querying about format
+
+
+select ?std ?stdCurrentEdition ?stdTitle     where {
+
+       ?std    rdf:type iri:RAStandard .
+       ?std     iri:hasEdition  ?stdCurrentEdition .
+       ?stdCurrentEdition  iri:title  ?stdTitle.
+       ?stdCurrentEdition  iri:isCurrentEdition true.   
+       ?stdCurrentEdition  iri:recordProperty "format".            
+}
+
+4) What standards address a specific content type of records or archives (e.g., text, image, audio, video, plan)?
+
+
+select ?std ?stdCurrentEdition ?stdTitle     where {
+
+       ?std    rdf:type iri:RAStandard .
+       ?std     iri:hasEdition  ?stdCurrentEdition .
+       ?stdCurrentEdition  iri:title  ?stdTitle.
+       ?stdCurrentEdition  iri:isCurrentEdition true.   
+       ?stdCurrentEdition  iri:contentType "image".            
+}
+5) What standards address a specific records or archives management function?
+
+
+
+
+select ?std ?stdCurrentEdition ?stdTitle     where {
+
+       ?std    rdf:type iri:ArchivalSystemStandard .
+       ?std     iri:hasEdition  ?stdCurrentEdition .
+       ?stdCurrentEdition  iri:title  ?stdTitle.
+       ?stdCurrentEdition  iri:isCurrentEdition true.   
+       ?stdCurrentEdition  iri:recordsFunction  "Preservation".            
+}
+
+
+6) What standards address a specific preservation aspect (e.g., integrity, authenticity, trustworthiness)?
+
+
+
+select ?std ?stdCurrentEdition ?stdTitle     where {
+
+       ?std    rdf:type iri:ArchivalSystemStandard .
+       ?std     iri:hasEdition  ?stdCurrentEdition .
+       ?stdCurrentEdition  iri:title  ?stdTitle.
+       ?stdCurrentEdition  iri:isCurrentEdition true.   
+       ?stdCurrentEdition  iri:preservationAspect  "Integrity".            
+}
+
+
+
+7) What standards address cross-cutting system functions (e.g., quality, security, privacy)?
+
+select ?std ?stdCurrentEdition ?stdTitle     where {
+
+       ?std    rdf:type iri:RAStandard .
+       ?std     iri:hasEdition  ?stdCurrentEdition .
+       ?stdCurrentEdition  iri:title  ?stdTitle.
+       ?stdCurrentEdition  iri:isCurrentEdition true.   
+       ?stdCurrentEdition  iri:crossFunction  "quality".            
+}
+
+
+
+8) What standards address record policies? 
+
+select ?std ?stdCurrentEdition ?stdTitle  where {
+
+       ?std    rdf:type iri:RAStandard .
+       ?std     iri:hasEdition  ?stdCurrentEdition .
+       ?stdCurrentEdition  iri:title  ?stdTitle.
+       ?stdCurrentEdition  iri:isCurrentEdition true.   
+       ?stdCurrentEdition  iri:addressesPolicies  true.            
+}
+
+
+
+
+9) What standards address a specific life-cycle stage of a
+records system (e.g., digital archiving, records management, electronic document management), such as 
+technical or functional requirements specification, conception, development methodology, development auditing,
+or maintenance?
+
+select ?std ?stdEdition ?stdTitle  ?devStage          where {
+       ?std    rdf:type iri:ArchivalSystemStandard .
+       ?std     iri:hasEdition ?stdEdition .
+       ?stdEdition  iri:title  ?stdTitle.
+       ?stdEdition  iri:isCurrentEdition true.
+       ?stdEdition  iri:developmentStage  ?devStage
+             
