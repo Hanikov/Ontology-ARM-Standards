@@ -1,4 +1,4 @@
- [2025] [EL MOKHTAR HANI & BOUCHRA EL IDRISSI/ IRIS Team /Laboratory MIKS/ el-mokhtar.hani@esi.ac.ma & bel-idrissi@esi.ac.maECOLE DES SCIENCES DE l'INFORMATION]
+ [2025] [EL MOKHTAR HANI & BOUCHRA EL IDRISSI/ IRIS Team /Laboratory MIKS/ el-mokhtar.hani@esi.ac.ma & bel-idrissi@esi.ac.maECOLE DES SCIENCES DE l'INFORMATION/Morocco]
 All rights reserved.
 
 All files and documents contained in the “Ontology ARM Standards” repository are protected by copyright under applicable national and international laws.
