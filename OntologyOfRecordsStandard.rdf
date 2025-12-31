@@ -1,543 +1,424 @@
-<?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.ontology-ma.org/recordsOntology/"
-     xml:base="http://www.ontology-ma.org/recordsOntology/"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:recordsOntology="http://www.ontology-ma.org/recordsOntology#">
-    <owl:Ontology rdf:about="http://www.ontology-ma.org/recordsOntology"/>
-    
-
-
-    <!-- 
+<rdf:RDF xml:base="http://www.ontology-ma.org/recordsOntology/">
+<owl:Ontology rdf:about="http://www.ontology-ma.org/recordsOntology"/>
+<!--
+ 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#belongsTo -->
-
-    <owl:ObjectProperty rdf:about="http://www.ontology-ma.org/recordsOntology#belongsTo">
-        <rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#TechnicalCommittee"/>
-        <rdfs:range rdf:resource="http://www.ontology-ma.org/recordsOntology#OrganizationBody"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#createdBy -->
-
-    <owl:ObjectProperty rdf:about="http://www.ontology-ma.org/recordsOntology#createdBy">
-        <rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
-        <rdfs:range rdf:resource="http://www.ontology-ma.org/recordsOntology#TechnicalCommittee"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#hasAmendment -->
-
-    <owl:ObjectProperty rdf:about="http://www.ontology-ma.org/recordsOntology#hasAmendment">
-        <rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
-        <rdfs:range rdf:resource="http://www.ontology-ma.org/recordsOntology#StandardAmendment"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#hasEdition -->
-
-    <owl:ObjectProperty rdf:about="http://www.ontology-ma.org/recordsOntology#hasEdition">
-        <owl:inverseOf rdf:resource="http://www.ontology-ma.org/recordsOntology#isEditionOf"/>
-        <rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
-        <rdfs:range rdf:resource="http://www.ontology-ma.org/recordsOntology#StandardEdition"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#hasPart -->
-
-    <owl:ObjectProperty rdf:about="http://www.ontology-ma.org/recordsOntology#hasPart">
-        <rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
-        <rdfs:range rdf:resource="http://www.ontology-ma.org/recordsOntology#StandardPart"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#isEditionOf -->
-
-    <owl:ObjectProperty rdf:about="http://www.ontology-ma.org/recordsOntology#isEditionOf">
-        <rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#StandardEdition"/>
-        <rdfs:range rdf:resource="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- 
+     
+-->
+<!--
+ http://www.ontology-ma.org/recordsOntology#belongsTo 
+-->
+<owl:ObjectProperty rdf:about="http://www.ontology-ma.org/recordsOntology#belongsTo">
+<rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#TechnicalCommittee"/>
+<rdfs:range rdf:resource="http://www.ontology-ma.org/recordsOntology#OrganizationBody"/>
+</owl:ObjectProperty>
+<!--
+ http://www.ontology-ma.org/recordsOntology#createdBy 
+-->
+<owl:ObjectProperty rdf:about="http://www.ontology-ma.org/recordsOntology#createdBy">
+<rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
+<rdfs:range rdf:resource="http://www.ontology-ma.org/recordsOntology#TechnicalCommittee"/>
+</owl:ObjectProperty>
+<!--
+ http://www.ontology-ma.org/recordsOntology#hasAmendment 
+-->
+<owl:ObjectProperty rdf:about="http://www.ontology-ma.org/recordsOntology#hasAmendment">
+<rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
+<rdfs:range rdf:resource="http://www.ontology-ma.org/recordsOntology#StandardAmendment"/>
+</owl:ObjectProperty>
+<!--
+ http://www.ontology-ma.org/recordsOntology#hasEdition 
+-->
+<owl:ObjectProperty rdf:about="http://www.ontology-ma.org/recordsOntology#hasEdition">
+<owl:inverseOf rdf:resource="http://www.ontology-ma.org/recordsOntology#isEditionOf"/>
+<rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
+<rdfs:range rdf:resource="http://www.ontology-ma.org/recordsOntology#StandardEdition"/>
+</owl:ObjectProperty>
+<!--
+ http://www.ontology-ma.org/recordsOntology#hasPart 
+-->
+<owl:ObjectProperty rdf:about="http://www.ontology-ma.org/recordsOntology#hasPart">
+<rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
+<rdfs:range rdf:resource="http://www.ontology-ma.org/recordsOntology#StandardPart"/>
+</owl:ObjectProperty>
+<!--
+ http://www.ontology-ma.org/recordsOntology#isEditionOf 
+-->
+<owl:ObjectProperty rdf:about="http://www.ontology-ma.org/recordsOntology#isEditionOf">
+<rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#StandardEdition"/>
+<rdfs:range rdf:resource="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
+</owl:ObjectProperty>
+<!--
+ 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Data properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#addressesPolicies -->
-
-    <owl:DatatypeProperty rdf:about="http://www.ontology-ma.org/recordsOntology#addressesPolicies">
-        <rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#amdEdition -->
-
-    <owl:DatatypeProperty rdf:about="http://www.ontology-ma.org/recordsOntology#amdEdition">
-        <rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#StandardAmendment"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#amdTitle -->
-
-    <owl:DatatypeProperty rdf:about="http://www.ontology-ma.org/recordsOntology#amdTitle">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#StandardAmendment"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#committeeCode -->
-
-    <owl:DatatypeProperty rdf:about="http://www.ontology-ma.org/recordsOntology#committeeCode">
-        <rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#TechnicalCommittee"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#committeeName -->
-
-    <owl:DatatypeProperty rdf:about="http://www.ontology-ma.org/recordsOntology#committeeName">
-        <rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#TechnicalCommittee"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#contentType -->
-
-    <owl:DatatypeProperty rdf:about="http://www.ontology-ma.org/recordsOntology#contentType">
-        <rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#crossFunction -->
-
-    <owl:DatatypeProperty rdf:about="http://www.ontology-ma.org/recordsOntology#crossFunction">
-        <rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#developmentStage -->
-
-    <owl:DatatypeProperty rdf:about="http://www.ontology-ma.org/recordsOntology#developmentStage">
-        <rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#SystemStandard"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#edition -->
-
-    <owl:DatatypeProperty rdf:about="http://www.ontology-ma.org/recordsOntology#edition">
-        <rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#ics -->
-
-    <owl:DatatypeProperty rdf:about="http://www.ontology-ma.org/recordsOntology#ics">
-        <rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#isCurrentEdition -->
-
-    <owl:DatatypeProperty rdf:about="http://www.ontology-ma.org/recordsOntology#isCurrentEdition">
-        <rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#StandardEdition"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#isaboutElectronicRecord -->
-
-    <owl:DatatypeProperty rdf:about="http://www.ontology-ma.org/recordsOntology#isaboutElectronicRecord">
-        <rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#isaboutPhysicalRecord -->
-
-    <owl:DatatypeProperty rdf:about="http://www.ontology-ma.org/recordsOntology#isaboutPhysicalRecord">
-        <rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#organizationName -->
-
-    <owl:DatatypeProperty rdf:about="http://www.ontology-ma.org/recordsOntology#organizationName">
-        <rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#OrganizationBody"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#preservationAspect -->
-
-    <owl:DatatypeProperty rdf:about="http://www.ontology-ma.org/recordsOntology#preservationAspect">
-        <rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#publicationDate -->
-
-    <owl:DatatypeProperty rdf:about="http://www.ontology-ma.org/recordsOntology#publicationDate">
-        <rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#recordProperty -->
-
-    <owl:DatatypeProperty rdf:about="http://www.ontology-ma.org/recordsOntology#recordProperty">
-        <rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#recordsFunction -->
-
-    <owl:DatatypeProperty rdf:about="http://www.ontology-ma.org/recordsOntology#recordsFunction">
-        <rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#standardSpecificationType -->
-
-    <owl:DatatypeProperty rdf:about="http://www.ontology-ma.org/recordsOntology#standardSpecificationType">
-        <rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#status -->
-
-    <owl:DatatypeProperty rdf:about="http://www.ontology-ma.org/recordsOntology#status">
-        <rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#systemCapability -->
-
-    <owl:DatatypeProperty rdf:about="http://www.ontology-ma.org/recordsOntology#systemCapability">
-        <rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#SystemStandard"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#systemTitle -->
-
-    <owl:DatatypeProperty rdf:about="http://www.ontology-ma.org/recordsOntology#systemTitle">
-        <rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#SystemStandard"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#title -->
-
-    <owl:DatatypeProperty rdf:about="http://www.ontology-ma.org/recordsOntology#title">
-        <rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- 
+     
+-->
+<!--
+ http://www.ontology-ma.org/recordsOntology#addressesPolicies 
+-->
+<owl:DatatypeProperty rdf:about="http://www.ontology-ma.org/recordsOntology#addressesPolicies">
+<rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+</owl:DatatypeProperty>
+<!--
+ http://www.ontology-ma.org/recordsOntology#amdEdition 
+-->
+<owl:DatatypeProperty rdf:about="http://www.ontology-ma.org/recordsOntology#amdEdition">
+<rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#StandardAmendment"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+<!--
+ http://www.ontology-ma.org/recordsOntology#amdTitle 
+-->
+<owl:DatatypeProperty rdf:about="http://www.ontology-ma.org/recordsOntology#amdTitle">
+<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+<rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#StandardAmendment"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+<!--
+ http://www.ontology-ma.org/recordsOntology#committeeCode 
+-->
+<owl:DatatypeProperty rdf:about="http://www.ontology-ma.org/recordsOntology#committeeCode">
+<rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#TechnicalCommittee"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+<!--
+ http://www.ontology-ma.org/recordsOntology#committeeName 
+-->
+<owl:DatatypeProperty rdf:about="http://www.ontology-ma.org/recordsOntology#committeeName">
+<rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#TechnicalCommittee"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+<!--
+ http://www.ontology-ma.org/recordsOntology#contentType 
+-->
+<owl:DatatypeProperty rdf:about="http://www.ontology-ma.org/recordsOntology#contentType">
+<rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+<!--
+ http://www.ontology-ma.org/recordsOntology#crossFunction 
+-->
+<owl:DatatypeProperty rdf:about="http://www.ontology-ma.org/recordsOntology#crossFunction">
+<rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+<!--
+ http://www.ontology-ma.org/recordsOntology#developmentStage 
+-->
+<owl:DatatypeProperty rdf:about="http://www.ontology-ma.org/recordsOntology#developmentStage">
+<rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#SystemStandard"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+<!--
+ http://www.ontology-ma.org/recordsOntology#edition 
+-->
+<owl:DatatypeProperty rdf:about="http://www.ontology-ma.org/recordsOntology#edition">
+<rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+<!-- http://www.ontology-ma.org/recordsOntology#ics -->
+<owl:DatatypeProperty rdf:about="http://www.ontology-ma.org/recordsOntology#ics">
+<rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+<!--
+ http://www.ontology-ma.org/recordsOntology#isCurrentEdition 
+-->
+<owl:DatatypeProperty rdf:about="http://www.ontology-ma.org/recordsOntology#isCurrentEdition">
+<rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#StandardEdition"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+</owl:DatatypeProperty>
+<!--
+ http://www.ontology-ma.org/recordsOntology#isaboutElectronicRecord 
+-->
+<owl:DatatypeProperty rdf:about="http://www.ontology-ma.org/recordsOntology#isaboutElectronicRecord">
+<rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+</owl:DatatypeProperty>
+<!--
+ http://www.ontology-ma.org/recordsOntology#isaboutPhysicalRecord 
+-->
+<owl:DatatypeProperty rdf:about="http://www.ontology-ma.org/recordsOntology#isaboutPhysicalRecord">
+<rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+</owl:DatatypeProperty>
+<!--
+ http://www.ontology-ma.org/recordsOntology#organizationName 
+-->
+<owl:DatatypeProperty rdf:about="http://www.ontology-ma.org/recordsOntology#organizationName">
+<rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#OrganizationBody"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+<!--
+ http://www.ontology-ma.org/recordsOntology#preservationAspect 
+-->
+<owl:DatatypeProperty rdf:about="http://www.ontology-ma.org/recordsOntology#preservationAspect">
+<rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+<!--
+ http://www.ontology-ma.org/recordsOntology#publicationDate 
+-->
+<owl:DatatypeProperty rdf:about="http://www.ontology-ma.org/recordsOntology#publicationDate">
+<rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+</owl:DatatypeProperty>
+<!--
+ http://www.ontology-ma.org/recordsOntology#recordProperty 
+-->
+<owl:DatatypeProperty rdf:about="http://www.ontology-ma.org/recordsOntology#recordProperty">
+<rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+<!--
+ http://www.ontology-ma.org/recordsOntology#recordsFunction 
+-->
+<owl:DatatypeProperty rdf:about="http://www.ontology-ma.org/recordsOntology#recordsFunction">
+<rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+<!--
+ http://www.ontology-ma.org/recordsOntology#standardSpecificationType 
+-->
+<owl:DatatypeProperty rdf:about="http://www.ontology-ma.org/recordsOntology#standardSpecificationType">
+<rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+<!--
+ http://www.ontology-ma.org/recordsOntology#status 
+-->
+<owl:DatatypeProperty rdf:about="http://www.ontology-ma.org/recordsOntology#status">
+<rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+<!--
+ http://www.ontology-ma.org/recordsOntology#systemCapability 
+-->
+<owl:DatatypeProperty rdf:about="http://www.ontology-ma.org/recordsOntology#systemCapability">
+<rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#SystemStandard"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+<!--
+ http://www.ontology-ma.org/recordsOntology#systemTitle 
+-->
+<owl:DatatypeProperty rdf:about="http://www.ontology-ma.org/recordsOntology#systemTitle">
+<rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#SystemStandard"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+<!-- http://www.ontology-ma.org/recordsOntology#title -->
+<owl:DatatypeProperty rdf:about="http://www.ontology-ma.org/recordsOntology#title">
+<rdfs:domain rdf:resource="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+<!--
+ 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#ArchivalStandard -->
-
-    <owl:Class rdf:about="http://www.ontology-ma.org/recordsOntology#ArchivalStandard">
-        <rdfs:subClassOf rdf:resource="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#ArchivalSystemStandard -->
-
-    <owl:Class rdf:about="http://www.ontology-ma.org/recordsOntology#ArchivalSystemStandard">
-        <rdfs:subClassOf rdf:resource="http://www.ontology-ma.org/recordsOntology#SystemStandard"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#MetadataStandard -->
-
-    <owl:Class rdf:about="http://www.ontology-ma.org/recordsOntology#MetadataStandard">
-        <rdfs:subClassOf rdf:resource="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#OrganizationBody -->
-
-    <owl:Class rdf:about="http://www.ontology-ma.org/recordsOntology#OrganizationBody"/>
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#RAStandard -->
-
-    <owl:Class rdf:about="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#RecordsStandard -->
-
-    <owl:Class rdf:about="http://www.ontology-ma.org/recordsOntology#RecordsStandard">
-        <rdfs:subClassOf rdf:resource="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#RecordsSystemStandard -->
-
-    <owl:Class rdf:about="http://www.ontology-ma.org/recordsOntology#RecordsSystemStandard">
-        <rdfs:subClassOf rdf:resource="http://www.ontology-ma.org/recordsOntology#SystemStandard"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#StandardAmendment -->
-
-    <owl:Class rdf:about="http://www.ontology-ma.org/recordsOntology#StandardAmendment"/>
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#StandardEdition -->
-
-    <owl:Class rdf:about="http://www.ontology-ma.org/recordsOntology#StandardEdition">
-        <rdfs:subClassOf rdf:resource="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#StandardPart -->
-
-    <owl:Class rdf:about="http://www.ontology-ma.org/recordsOntology#StandardPart">
-        <rdfs:subClassOf rdf:resource="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#SystemStandard -->
-
-    <owl:Class rdf:about="http://www.ontology-ma.org/recordsOntology#SystemStandard">
-        <rdfs:subClassOf rdf:resource="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#TechnicalCommittee -->
-
-    <owl:Class rdf:about="http://www.ontology-ma.org/recordsOntology#TechnicalCommittee"/>
-    
-
-
-    <!-- 
+     
+-->
+<!--
+ http://www.ontology-ma.org/recordsOntology#ArchivalStandard 
+-->
+<owl:Class rdf:about="http://www.ontology-ma.org/recordsOntology#ArchivalStandard">
+<rdfs:subClassOf rdf:resource="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
+</owl:Class>
+<!--
+ http://www.ontology-ma.org/recordsOntology#ArchivalSystemStandard 
+-->
+<owl:Class rdf:about="http://www.ontology-ma.org/recordsOntology#ArchivalSystemStandard">
+<rdfs:subClassOf rdf:resource="http://www.ontology-ma.org/recordsOntology#SystemStandard"/>
+</owl:Class>
+<!--
+ http://www.ontology-ma.org/recordsOntology#MetadataStandard 
+-->
+<owl:Class rdf:about="http://www.ontology-ma.org/recordsOntology#MetadataStandard">
+<rdfs:subClassOf rdf:resource="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
+</owl:Class>
+<!--
+ http://www.ontology-ma.org/recordsOntology#OrganizationBody 
+-->
+<owl:Class rdf:about="http://www.ontology-ma.org/recordsOntology#OrganizationBody"/>
+<!--
+ http://www.ontology-ma.org/recordsOntology#RAStandard 
+-->
+<owl:Class rdf:about="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
+<!--
+ http://www.ontology-ma.org/recordsOntology#RecordsStandard 
+-->
+<owl:Class rdf:about="http://www.ontology-ma.org/recordsOntology#RecordsStandard">
+<rdfs:subClassOf rdf:resource="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
+</owl:Class>
+<!--
+ http://www.ontology-ma.org/recordsOntology#RecordsSystemStandard 
+-->
+<owl:Class rdf:about="http://www.ontology-ma.org/recordsOntology#RecordsSystemStandard">
+<rdfs:subClassOf rdf:resource="http://www.ontology-ma.org/recordsOntology#SystemStandard"/>
+</owl:Class>
+<!--
+ http://www.ontology-ma.org/recordsOntology#StandardAmendment 
+-->
+<owl:Class rdf:about="http://www.ontology-ma.org/recordsOntology#StandardAmendment"/>
+<!--
+ http://www.ontology-ma.org/recordsOntology#StandardEdition 
+-->
+<owl:Class rdf:about="http://www.ontology-ma.org/recordsOntology#StandardEdition">
+<rdfs:subClassOf rdf:resource="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
+</owl:Class>
+<!--
+ http://www.ontology-ma.org/recordsOntology#StandardPart 
+-->
+<owl:Class rdf:about="http://www.ontology-ma.org/recordsOntology#StandardPart">
+<rdfs:subClassOf rdf:resource="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
+</owl:Class>
+<!--
+ http://www.ontology-ma.org/recordsOntology#SystemStandard 
+-->
+<owl:Class rdf:about="http://www.ontology-ma.org/recordsOntology#SystemStandard">
+<rdfs:subClassOf rdf:resource="http://www.ontology-ma.org/recordsOntology#RAStandard"/>
+</owl:Class>
+<!--
+ http://www.ontology-ma.org/recordsOntology#TechnicalCommittee 
+-->
+<owl:Class rdf:about="http://www.ontology-ma.org/recordsOntology#TechnicalCommittee"/>
+<!--
+ 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Individuals
     //
     ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#ISO -->
-
-    <owl:NamedIndividual rdf:about="http://www.ontology-ma.org/recordsOntology#ISO">
-        <rdf:type rdf:resource="http://www.ontology-ma.org/recordsOntology#OrganizationBody"/>
-        <recordsOntology:organizationName>ISO</recordsOntology:organizationName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#ISO_14721 -->
-
-    <owl:NamedIndividual rdf:about="http://www.ontology-ma.org/recordsOntology#ISO_14721">
-        <rdf:type rdf:resource="http://www.ontology-ma.org/recordsOntology#ArchivalSystemStandard"/>
-        <recordsOntology:createdBy rdf:resource="http://www.ontology-ma.org/recordsOntology#ISO_TC20_SC13"/>
-        <recordsOntology:hasEdition rdf:resource="http://www.ontology-ma.org/recordsOntology#ISO_14721_2025"/>
-        <recordsOntology:ics>49.140</recordsOntology:ics>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#ISO_14721_2025 -->
-
-    <owl:NamedIndividual rdf:about="http://www.ontology-ma.org/recordsOntology#ISO_14721_2025">
-        <rdf:type rdf:resource="http://www.ontology-ma.org/recordsOntology#StandardEdition"/>
-        <recordsOntology:developmentStage>Conceptualization</recordsOntology:developmentStage>
-        <recordsOntology:edition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</recordsOntology:edition>
-        <recordsOntology:isCurrentEdition rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recordsOntology:isCurrentEdition>
-        <recordsOntology:isaboutElectronicRecord rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recordsOntology:isaboutElectronicRecord>
-        <recordsOntology:isaboutPhysicalRecord rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recordsOntology:isaboutPhysicalRecord>
-        <recordsOntology:recordsFunction>Preservation</recordsOntology:recordsFunction>
-        <recordsOntology:recordsFunction>access</recordsOntology:recordsFunction>
-        <recordsOntology:standardSpecificationType>Conceptual Specification</recordsOntology:standardSpecificationType>
-        <recordsOntology:status>Published</recordsOntology:status>
-        <recordsOntology:title>Space Data System Practices — Reference model for an open archival information system (OAIS)</recordsOntology:title>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#ISO_23081 -->
-
-    <owl:NamedIndividual rdf:about="http://www.ontology-ma.org/recordsOntology#ISO_23081">
-        <rdf:type rdf:resource="http://www.ontology-ma.org/recordsOntology#MetadataStandard"/>
-        <recordsOntology:createdBy rdf:resource="http://www.ontology-ma.org/recordsOntology#ISO_TC46_SC11"/>
-        <recordsOntology:hasPart rdf:resource="http://www.ontology-ma.org/recordsOntology#ISO_23081_1_2017"/>
-        <recordsOntology:hasPart rdf:resource="http://www.ontology-ma.org/recordsOntology#ISO_23081_2_2021"/>
-        <recordsOntology:ics>01.140.20</recordsOntology:ics>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#ISO_23081_1_2017 -->
-
-    <owl:NamedIndividual rdf:about="http://www.ontology-ma.org/recordsOntology#ISO_23081_1_2017">
-        <rdf:type rdf:resource="http://www.ontology-ma.org/recordsOntology#StandardPart"/>
-        <recordsOntology:edition rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</recordsOntology:edition>
-        <recordsOntology:recordsFunction>Metadata management</recordsOntology:recordsFunction>
-        <recordsOntology:standardSpecificationType>Specification of Principles</recordsOntology:standardSpecificationType>
-        <recordsOntology:status>Published</recordsOntology:status>
-        <recordsOntology:title>nformation and documentation — Records management processes — Metadata for records Part 1: Principles</recordsOntology:title>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#ISO_23081_2_2021 -->
-
-    <owl:NamedIndividual rdf:about="http://www.ontology-ma.org/recordsOntology#ISO_23081_2_2021">
-        <rdf:type rdf:resource="http://www.ontology-ma.org/recordsOntology#StandardPart"/>
-        <recordsOntology:edition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</recordsOntology:edition>
-        <recordsOntology:recordsFunction>Metadata management</recordsOntology:recordsFunction>
-        <recordsOntology:standardSpecificationType>Conception</recordsOntology:standardSpecificationType>
-        <recordsOntology:standardSpecificationType>Implementation</recordsOntology:standardSpecificationType>
-        <recordsOntology:status>Published</recordsOntology:status>
-        <recordsOntology:title>nformation and documentation — Metadata for managing records — Part 2: Conceptual and implementation issues</recordsOntology:title>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#ISO_30301 -->
-
-    <owl:NamedIndividual rdf:about="http://www.ontology-ma.org/recordsOntology#ISO_30301">
-        <rdf:type rdf:resource="http://www.ontology-ma.org/recordsOntology#RecordsSystemStandard"/>
-        <recordsOntology:createdBy rdf:resource="http://www.ontology-ma.org/recordsOntology#ISO_TC46_SC11"/>
-        <recordsOntology:hasEdition rdf:resource="http://www.ontology-ma.org/recordsOntology#ISO_30301_2019"/>
-        <recordsOntology:ics>01.140.20</recordsOntology:ics>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#ISO_30301_2019 -->
-
-    <owl:NamedIndividual rdf:about="http://www.ontology-ma.org/recordsOntology#ISO_30301_2019">
-        <rdf:type rdf:resource="http://www.ontology-ma.org/recordsOntology#StandardEdition"/>
-        <recordsOntology:hasAmendment rdf:resource="http://www.ontology-ma.org/recordsOntology#ISO_30301_2019_Amd_1_2024"/>
-        <recordsOntology:addressesPolicies rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recordsOntology:addressesPolicies>
-        <recordsOntology:crossFunction>Performance</recordsOntology:crossFunction>
-        <recordsOntology:developmentStage>Requirements Specification</recordsOntology:developmentStage>
-        <recordsOntology:edition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</recordsOntology:edition>
-        <recordsOntology:status>Published</recordsOntology:status>
-        <recordsOntology:title>Information and documentation — Management systems for records — Requirements</recordsOntology:title>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#ISO_30301_2019_Amd_1_2024 -->
-
-    <owl:NamedIndividual rdf:about="http://www.ontology-ma.org/recordsOntology#ISO_30301_2019_Amd_1_2024">
-        <rdf:type rdf:resource="http://www.ontology-ma.org/recordsOntology#StandardAmendment"/>
-        <recordsOntology:amdEdition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</recordsOntology:amdEdition>
-        <recordsOntology:amdTitle>Amendment 1: Climate action changes</recordsOntology:amdTitle>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#ISO_TC20_SC13 -->
-
-    <owl:NamedIndividual rdf:about="http://www.ontology-ma.org/recordsOntology#ISO_TC20_SC13">
-        <rdf:type rdf:resource="http://www.ontology-ma.org/recordsOntology#TechnicalCommittee"/>
-        <recordsOntology:committeeName>Space data and information transfer systems</recordsOntology:committeeName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.ontology-ma.org/recordsOntology#ISO_TC46_SC11 -->
-
-    <owl:NamedIndividual rdf:about="http://www.ontology-ma.org/recordsOntology#ISO_TC46_SC11">
-        <recordsOntology:belongsTo rdf:resource="http://www.ontology-ma.org/recordsOntology#ISO"/>
-        <recordsOntology:committeeCode>ISO/TC 46/SC 11</recordsOntology:committeeCode>
-        <recordsOntology:committeeName>Archives/records management</recordsOntology:committeeName>
-    </owl:NamedIndividual>
+     
+-->
+<!-- http://www.ontology-ma.org/recordsOntology#ISO -->
+<owl:NamedIndividual rdf:about="http://www.ontology-ma.org/recordsOntology#ISO">
+<rdf:type rdf:resource="http://www.ontology-ma.org/recordsOntology#OrganizationBody"/>
+<recordsOntology:organizationName>ISO</recordsOntology:organizationName>
+</owl:NamedIndividual>
+<!--
+ http://www.ontology-ma.org/recordsOntology#ISO_14721 
+-->
+<owl:NamedIndividual rdf:about="http://www.ontology-ma.org/recordsOntology#ISO_14721">
+<rdf:type rdf:resource="http://www.ontology-ma.org/recordsOntology#ArchivalSystemStandard"/>
+<recordsOntology:createdBy rdf:resource="http://www.ontology-ma.org/recordsOntology#ISO_TC20_SC13"/>
+<recordsOntology:hasEdition rdf:resource="http://www.ontology-ma.org/recordsOntology#ISO_14721_2025"/>
+<recordsOntology:ics>49.140</recordsOntology:ics>
+</owl:NamedIndividual>
+<!--
+ http://www.ontology-ma.org/recordsOntology#ISO_14721_2025 
+-->
+<owl:NamedIndividual rdf:about="http://www.ontology-ma.org/recordsOntology#ISO_14721_2025">
+<rdf:type rdf:resource="http://www.ontology-ma.org/recordsOntology#StandardEdition"/>
+<recordsOntology:developmentStage>Conceptualization</recordsOntology:developmentStage>
+<recordsOntology:edition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</recordsOntology:edition>
+<recordsOntology:isCurrentEdition rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recordsOntology:isCurrentEdition>
+<recordsOntology:isaboutElectronicRecord rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recordsOntology:isaboutElectronicRecord>
+<recordsOntology:isaboutPhysicalRecord rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recordsOntology:isaboutPhysicalRecord>
+<recordsOntology:recordsFunction>Preservation</recordsOntology:recordsFunction>
+<recordsOntology:recordsFunction>access</recordsOntology:recordsFunction>
+<recordsOntology:standardSpecificationType>Conceptual Specification</recordsOntology:standardSpecificationType>
+<recordsOntology:status>Published</recordsOntology:status>
+<recordsOntology:title>
+Space Data System Practices — Reference model for an open archival information system (OAIS)
+</recordsOntology:title>
+</owl:NamedIndividual>
+<!--
+ http://www.ontology-ma.org/recordsOntology#ISO_23081 
+-->
+<owl:NamedIndividual rdf:about="http://www.ontology-ma.org/recordsOntology#ISO_23081">
+<rdf:type rdf:resource="http://www.ontology-ma.org/recordsOntology#MetadataStandard"/>
+<recordsOntology:createdBy rdf:resource="http://www.ontology-ma.org/recordsOntology#ISO_TC46_SC11"/>
+<recordsOntology:hasPart rdf:resource="http://www.ontology-ma.org/recordsOntology#ISO_23081_1_2017"/>
+<recordsOntology:hasPart rdf:resource="http://www.ontology-ma.org/recordsOntology#ISO_23081_2_2021"/>
+<recordsOntology:ics>01.140.20</recordsOntology:ics>
+</owl:NamedIndividual>
+<!--
+ http://www.ontology-ma.org/recordsOntology#ISO_23081_1_2017 
+-->
+<owl:NamedIndividual rdf:about="http://www.ontology-ma.org/recordsOntology#ISO_23081_1_2017">
+<rdf:type rdf:resource="http://www.ontology-ma.org/recordsOntology#StandardPart"/>
+<recordsOntology:edition rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</recordsOntology:edition>
+<recordsOntology:recordsFunction>Metadata management</recordsOntology:recordsFunction>
+<recordsOntology:standardSpecificationType>Specification of Principles</recordsOntology:standardSpecificationType>
+<recordsOntology:status>Published</recordsOntology:status>
+<recordsOntology:title>
+nformation and documentation — Records management processes — Metadata for records Part 1: Principles
+</recordsOntology:title>
+</owl:NamedIndividual>
+<!--
+ http://www.ontology-ma.org/recordsOntology#ISO_23081_2_2021 
+-->
+<owl:NamedIndividual rdf:about="http://www.ontology-ma.org/recordsOntology#ISO_23081_2_2021">
+<rdf:type rdf:resource="http://www.ontology-ma.org/recordsOntology#StandardPart"/>
+<recordsOntology:edition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</recordsOntology:edition>
+<recordsOntology:recordsFunction>Metadata management</recordsOntology:recordsFunction>
+<recordsOntology:standardSpecificationType>Conception</recordsOntology:standardSpecificationType>
+<recordsOntology:standardSpecificationType>Implementation</recordsOntology:standardSpecificationType>
+<recordsOntology:status>Published</recordsOntology:status>
+<recordsOntology:title>
+nformation and documentation — Metadata for managing records — Part 2: Conceptual and implementation issues
+</recordsOntology:title>
+</owl:NamedIndividual>
+<!--
+ http://www.ontology-ma.org/recordsOntology#ISO_30301 
+-->
+<owl:NamedIndividual rdf:about="http://www.ontology-ma.org/recordsOntology#ISO_30301">
+<rdf:type rdf:resource="http://www.ontology-ma.org/recordsOntology#RecordsSystemStandard"/>
+<recordsOntology:createdBy rdf:resource="http://www.ontology-ma.org/recordsOntology#ISO_TC46_SC11"/>
+<recordsOntology:hasEdition rdf:resource="http://www.ontology-ma.org/recordsOntology#ISO_30301_2019"/>
+<recordsOntology:ics>01.140.20</recordsOntology:ics>
+</owl:NamedIndividual>
+<!--
+ http://www.ontology-ma.org/recordsOntology#ISO_30301_2019 
+-->
+<owl:NamedIndividual rdf:about="http://www.ontology-ma.org/recordsOntology#ISO_30301_2019">
+<rdf:type rdf:resource="http://www.ontology-ma.org/recordsOntology#StandardEdition"/>
+<recordsOntology:hasAmendment rdf:resource="http://www.ontology-ma.org/recordsOntology#ISO_30301_2019_Amd_1_2024"/>
+<recordsOntology:addressesPolicies rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recordsOntology:addressesPolicies>
+<recordsOntology:crossFunction>Performance</recordsOntology:crossFunction>
+<recordsOntology:developmentStage>Requirements Specification</recordsOntology:developmentStage>
+<recordsOntology:edition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</recordsOntology:edition>
+<recordsOntology:isCurrentEdition rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recordsOntology:isCurrentEdition>
+<recordsOntology:status>Published</recordsOntology:status>
+<recordsOntology:title>
+Information and documentation — Management systems for records — Requirements
+</recordsOntology:title>
+</owl:NamedIndividual>
+<!--
+ http://www.ontology-ma.org/recordsOntology#ISO_30301_2019_Amd_1_2024 
+-->
+<owl:NamedIndividual rdf:about="http://www.ontology-ma.org/recordsOntology#ISO_30301_2019_Amd_1_2024">
+<rdf:type rdf:resource="http://www.ontology-ma.org/recordsOntology#StandardAmendment"/>
+<recordsOntology:amdEdition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</recordsOntology:amdEdition>
+<recordsOntology:amdTitle>Amendment 1: Climate action changes</recordsOntology:amdTitle>
+</owl:NamedIndividual>
+<!--
+ http://www.ontology-ma.org/recordsOntology#ISO_TC20_SC13 
+-->
+<owl:NamedIndividual rdf:about="http://www.ontology-ma.org/recordsOntology#ISO_TC20_SC13">
+<rdf:type rdf:resource="http://www.ontology-ma.org/recordsOntology#TechnicalCommittee"/>
+<recordsOntology:committeeName>Space data and information transfer systems</recordsOntology:committeeName>
+</owl:NamedIndividual>
+<!--
+ http://www.ontology-ma.org/recordsOntology#ISO_TC46_SC11 
+-->
+<owl:NamedIndividual rdf:about="http://www.ontology-ma.org/recordsOntology#ISO_TC46_SC11">
+<recordsOntology:belongsTo rdf:resource="http://www.ontology-ma.org/recordsOntology#ISO"/>
+<recordsOntology:committeeCode>ISO/TC 46/SC 11</recordsOntology:committeeCode>
+<recordsOntology:committeeName>Archives/records management</recordsOntology:committeeName>
+</owl:NamedIndividual>
 </rdf:RDF>
-
-
-
-<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
-
+<!--
+ Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi 
+-->
